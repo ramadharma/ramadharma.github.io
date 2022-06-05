@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Joan&family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.title {
+    font-family: 'Joan', serif;
+}
+
+.highlight-1 {
+    position: relative;
+    cursor: default;
+}
+
+.highlight-1::after {
+    content: '';
+    height: 20px;
+    background: #05ffa1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    transition: all 0.2s;
+    transform-origin: 0% 100%;
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    transform: rotate(1deg);
+}
+
+.highlight-1:hover {
+    transition: all 0.5s;
+}
+
+.highlight-1:hover::after {
+    transform: scaleY(2.5);
+    transition: all 0.2s;
+}
+
+/* Header start */
+.navbar-fixed {
+    @apply fixed z-[9999] bg-white 
+}
+
+.hamburger-line {
+    @apply w-[24px] h-[3px] my-[4px] rounded bg-slate-900 block;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
+}
+/* Header end */
