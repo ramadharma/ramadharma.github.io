@@ -65,3 +65,20 @@ body {
     @apply -rotate-45;
 }
 /* Header end */
+
+
+
+/* About page start */
+
+.profil {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: all 0.3s;
+}
+
+.profil:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+/* About page end */
